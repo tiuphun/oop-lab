@@ -4,16 +4,32 @@ public class Cart {
     public int qtyOrdered = 0;
 
     public void addDigitalVideoDisc(DigitalVideoDisc disc) {
-        // Check current quantity for full list
+        if (qtyOrdered > MAX_NUMBERS_ORDERED) {
+            System.out.println("The cart is full!\n");
+            return;
+        }
+        else {
+            qtyOrdered = qtyOrdered + 1;
+            System.out.println("The disc has been added.\n");
+        }
     }
     
-    public static void removeDigitalVideoDisc(DigitalVideoDisc disc) {
-    
+    public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
+        if (qtyOrdered == 0) {
+            System.out.println("Your cart is empty!\n");
+            return;
+        }
+        else {
+            qtyOrdered = qtyOrdered - 1;
+            System.out.println("The disc has been removed.\n");
+        }
     }
 
     public float totalCost() {
-
-        return 0.0f;
-    
+        float total = 0.0f;
+        for (int i = 0; i < qtyOrdered; i++) {
+            total = total + itemsOrdered[i].getCost();
+        }
+        return total;
     }
 }
