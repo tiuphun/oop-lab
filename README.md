@@ -3,11 +3,12 @@
 FYI - Student Name: Nguyen Tieu Phuong | ID: 20210692
 
 ## Navigating the folder structure
-1. **Lab 1**: All the source codes are inside the folder named `lab1`.
-2. **Lab 2**: The UML diagram, drawn with Astah, is inside the folder named `lab2`. The source codes is inside the folder `AimsProject`.
-3. **Lab 3**:
-4. **Lab 4**:
-5. **Lab 5**:
+This repository is branched into several branches.
+`main` is for commits of the tasks done in lab class. Each folder is as follows:
+* `aims`: all the codes for the Aims project.
+* `others`: codes for tasks other than the Aims project.
+
+`release/lab` is for commits of the tasks done in after-lab class. The code for grading of each lab should be found there.
 
 ## How to compile & run
 Upon finishing writing the Java code, save the file.

@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TestPassingParameter",
+            "request": "launch",
+            "mainClass": "aims.src.TestPassingParameter",
+            "projectName": "[IT3100E] OOP Lab_7f55a7f5"
+        },
+        {
+            "type": "java",
+            "name": "Aims",
+            "request": "launch",
+            "mainClass": "aims.src.Aims",
+            "projectName": "[IT3100E] OOP Lab_7f55a7f5"
+        },
+        {
+            "type": "java",
             "name": "ConcatenationInLoops",
             "request": "launch",
             "mainClass": "others.lab3.ConcatenationInLoops",
