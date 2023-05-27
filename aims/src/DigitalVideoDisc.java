@@ -5,6 +5,7 @@ public class DigitalVideoDisc {
     private int length;
     private float cost;
 
+    // GETTERS
     public String getTitle() {
         return title;
     }
@@ -20,10 +21,13 @@ public class DigitalVideoDisc {
     public float getCost() {
         return cost;
     }
+
+    // SETTERS
     public void setTitle(String title) {
         this.title = title;
     }
     
+    // CONSTUCTORS
     public DigitalVideoDisc() {
         title = "Untitled";
         category = "Other";
