@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ConcatenationInLoops",
+            "request": "launch",
+            "mainClass": "others.lab3.ConcatenationInLoops",
+            "projectName": "[IT3100E] OOP Lab_7f55a7f5"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
