@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "NoGarbage",
+            "request": "launch",
+            "mainClass": "lab3.NoGarbage",
+            "projectName": "[IT3100E] OOP Lab_7f55a7f5"
+        },
+        {
+            "type": "java",
+            "name": "GarbageCreator",
+            "request": "launch",
+            "mainClass": "lab3.GarbageCreator",
+            "projectName": "[IT3100E] OOP Lab_7f55a7f5"
+        },
+        {
+            "type": "java",
+            "name": "ConcatenationInLoops",
+            "request": "launch",
+            "mainClass": "lab3.ConcatenationInLoops",
+            "projectName": "[IT3100E] OOP Lab_7f55a7f5"
+        },
+        {
+            "type": "java",
             "name": "TestPassingParameter",
             "request": "launch",
             "mainClass": "aims.src.TestPassingParameter",
