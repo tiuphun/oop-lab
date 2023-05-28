@@ -36,7 +36,6 @@ public class DigitalVideoDisc {
         length = 0;
         cost = 0.0f;
     }
-    DigitalVideoDisc dvdl = new DigitalVideoDisc();
     
     public DigitalVideoDisc(String title) {
         this.title = title;

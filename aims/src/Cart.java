@@ -39,7 +39,11 @@ public class Cart {
             }
             itemsOrdered[qtyOrdered - 1] = null;
             qtyOrdered--;
-            System.out.println("The disc has been removed.\n");
+            System.out.println("The disc " + disc.getTitle() + " has been removed.\n");
+            System.out.println("Discs remain in the cart:");
+            for (int i = 0; i < qtyOrdered; i++) {
+                System.out.println(itemsOrdered[i].getTitle());
+            }
         }
     }
 }
