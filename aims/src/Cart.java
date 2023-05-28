@@ -15,6 +15,50 @@ public class Cart {
             System.out.println("The disc has been added.\n");
         }
     }
+
+    // Pass array vs. pass abitrairy number of arguments
+    // Personally I prefer to pass array. It's more readable and easier to understand.
+    public void addDigitalVideoDisc(DigitalVideoDisc[] dvdList) {
+        if (qtyOrdered + dvdList.length > MAX_NUMBERS_ORDERED) {
+            System.out.println("The cart is full!\n");
+            return;
+        }
+        else {
+            for (int i = 0; i < dvdList.length; i++) {
+                itemsOrdered[qtyOrdered] = dvdList[i];
+                qtyOrdered = qtyOrdered + 1;
+            }
+            System.out.println("The discs have been added.\n");
+        }
+    }
+
+    public void addDigitalVideoDisc(DigitalVideoDisc...dvds) {
+        if (qtyOrdered + dvds.length > MAX_NUMBERS_ORDERED) {
+            System.out.println("The cart is full!\n");
+            return;
+        }
+        else {
+            for (int i = 0; i < dvds.length; i++) {
+                itemsOrdered[qtyOrdered] = dvds[i];
+                qtyOrdered = qtyOrdered + 1;
+            }
+            System.out.println("The discs have been added.\n");
+        }
+    }
+
+    public void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
+        if (qtyOrdered + 2 > MAX_NUMBERS_ORDERED) {
+            System.out.println("The cart is full!\n");
+            return;
+        }
+        else {
+            itemsOrdered[qtyOrdered] = dvd1;
+            qtyOrdered = qtyOrdered + 1;
+            itemsOrdered[qtyOrdered] = dvd2;
+            qtyOrdered = qtyOrdered + 1;
+            System.out.println("The discs have been added.\n");
+        }
+    }
     
     public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
     if (qtyOrdered == 0) {
