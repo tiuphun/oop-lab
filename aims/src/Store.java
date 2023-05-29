@@ -10,7 +10,7 @@ public class Store {
 
     public void removeDVD(int discID) {
         for (int i = 0; i < itemsInStore.length; i++) {
-            if (itemsInStore[i].getId() == discID) {
+            if (itemsInStore[i] != null && itemsInStore[i].getId() == discID) {
                 for (int j = i; j < itemsInStore.length - 1; j++) {
                     itemsInStore[j] = itemsInStore[j + 1];
                 }
@@ -18,9 +18,10 @@ public class Store {
                 break;
             }
         }
-    }
+}
 
     public void displayStore() {
+        System.out.println("Store:");
         for (int i = 0; i < itemsInStore.length; i++) {
             if (itemsInStore[i] != null) {
                 System.out.println(itemsInStore[i].getTitle());

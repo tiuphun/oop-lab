@@ -5,6 +5,7 @@ public class DigitalVideoDisc {
     private String director;
     private int length;
     private float cost;
+    
 
     // GETTERS
     public String getTitle() {
