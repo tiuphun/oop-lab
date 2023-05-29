@@ -24,6 +24,9 @@ public class DigitalVideoDisc {
     public float getCost() {
         return cost;
     }
+    public int getId() {
+        return id;
+    }
 
     // SETTERS
     public void setTitle(String title) {
