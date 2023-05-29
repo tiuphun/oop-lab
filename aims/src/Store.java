@@ -1,12 +1,11 @@
 package aims.src;
 
 public class Store {
-    private static DigitalVideoDisc itemsInStore[];
+    private static DigitalVideoDisc itemsInStore[] = new DigitalVideoDisc[10];
 
     public void addDVD(DigitalVideoDisc disc) {
         DigitalVideoDisc newDisc = new DigitalVideoDisc(disc.getTitle(), disc.getCategory(), disc.getDirector(), disc.getLength(), disc.getCost());
-        itemsInStore[itemsInStore.length] = newDisc;
-
+        itemsInStore[itemsInStore.length - 1] = newDisc;
     }
 
     public void removeDVD(int discID) {
@@ -20,6 +19,12 @@ public class Store {
             }
         }
     }
-    
-}
 
+    public void displayStore() {
+        for (int i = 0; i < itemsInStore.length; i++) {
+            if (itemsInStore[i] != null) {
+                System.out.println(itemsInStore[i].getTitle());
+            }
+        }
+    }
+}

@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "StoreTest",
+            "request": "launch",
+            "mainClass": "aims.src.StoreTest",
+            "projectName": "[IT3100E] OOP Lab_7f55a7f5"
+        },
+        {
+            "type": "java",
             "name": "NoGarbage",
             "request": "launch",
             "mainClass": "lab3.NoGarbage",
