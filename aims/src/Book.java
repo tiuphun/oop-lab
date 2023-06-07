@@ -9,7 +9,9 @@ public class Book extends Media {
         return authors;
     }
 
-    public Book() {}
+    public Book() {
+        super("Untitled", "Other", 0.0f, 0);
+    }
 
     public void addAuthor(String authorName) {
         if (authors.contains(authorName)) {
