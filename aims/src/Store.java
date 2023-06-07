@@ -28,7 +28,7 @@ public class Store {
         System.out.println("Items in store:");
         int i = 1;
         for (Media item : itemsInStore) {
-            System.out.println(i + ". DVD - " + item.getTitle() + " - " + item.getCategory() + " - " + item.getDirector() + " - " + item.getLength() + ": " + item.getCost() + "$");
+            System.out.println(i + ". DVD - " + item.getTitle() + " - " + item.getCategory() + " - " + ": " + item.getCost() + "$");
             i++;
         }
         System.out.println("***************************************************");

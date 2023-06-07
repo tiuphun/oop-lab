@@ -29,7 +29,7 @@ public class Cart {
         System.out.println("Ordered items:");
         int i = 1;
         for (Media item : itemsOrdered) {
-            System.out.println(i + ". DVD - " + item.getTitle() + " - " + item.getCategory() + " - " + item.getDirector() + " - " + itemsOrdered[i].getLength() + ": " + item.getCost() + "$");
+            System.out.println(i + ". DVD - " + item.getTitle() + " - " + item.getCategory() + ": " + item.getCost() + "$");
             i++;
         }
         System.out.println("Total cost: " + totalCost() + "$");
