@@ -23,8 +23,7 @@ public class Cart {
         }
     }
 
-
-    public void printCart() {
+    public void printCart(Cart cart) {
         System.out.println("***********************CART***********************");
         System.out.println("Ordered items:");
         int i = 1;
@@ -35,7 +34,6 @@ public class Cart {
         System.out.println("Total cost: " + totalCost() + "$");
         System.out.println("***************************************************");
     }
-
 
     public void searchByID(int id) {
         for (Media item : itemsOrdered) {
