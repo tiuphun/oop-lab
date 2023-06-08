@@ -1,9 +1,8 @@
 package aims.src;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
 public class Cart {
     public static final int MAX_NUMBERS_ORDERED = 20;
@@ -68,8 +67,13 @@ public class Cart {
     }
 
     public Map<String, Media> getItemsOrdered() {
-        Map<String, Media> mediaMap = itemsOrdered.stream().collect(Collectors.toMap(Media::getTitle, Function.identity()));
-        return mediaMap;
+    Map<String, Media> itemsByTitle = new HashMap<>();
+    for (Media media : itemsOrdered) {
+        itemsByTitle.put(media.getTitle(), media);
+        itemsByTitle.put(Integer.toString(media.getId()), media);
     }
+    return itemsByTitle;
+}
+
 
 }

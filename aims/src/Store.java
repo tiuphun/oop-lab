@@ -1,9 +1,8 @@
 package aims.src;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
 public class Store {
     private static ArrayList<Media> itemsInStore = new ArrayList<Media> ();
@@ -38,8 +37,13 @@ public class Store {
     }
 
     public Map<String, Media> getItemsInStore() {
-        Map<String, Media> mediaMap = itemsInStore.stream().collect(Collectors.toMap(Media::getTitle, Function.identity()));
-        return mediaMap;
+        Map<String, Media> itemsByTitle = new HashMap<>();
+        for (Media media : itemsInStore) {
+            itemsByTitle.put(media.getTitle(), media);
+            itemsByTitle.put(Integer.toString(media.getId()), media);
+        }
+        return itemsByTitle;
     }
+
 
 }

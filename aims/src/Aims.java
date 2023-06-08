@@ -237,6 +237,7 @@ public class Aims extends Cart{
                 break;
             case 0:
                 cartMenu(scanner, choice, store, cart);
+                break;
             default:
                 System.out.println("Invalid choice. Please try again.");
                 break;
@@ -265,6 +266,7 @@ public class Aims extends Cart{
                 break;
             case 0:
                 cartMenu(scanner, choice, store, cart);
+                break;
             default:
                 System.out.println("Invalid choice. Please try again.");
                 break;
@@ -274,9 +276,7 @@ public class Aims extends Cart{
 
     public static void placeOrder(Cart cart) {
         System.out.println("Order placed!");
-        for (Media item : getItemsOrdered()) {
-            item = null;
-        }
+        cart = null;
     }
 
     public static void addMediaToStore(Scanner scanner, Store store, Cart cart) {
