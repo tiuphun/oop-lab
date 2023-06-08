@@ -40,6 +40,10 @@ public class DigitalVideoDisc extends Media implements Playable{
         this.length = length;
         nbDigitalVideoDiscs++;
     }
+    public DigitalVideoDisc(String title, String category, float cost, int id) {
+        super(title, category, cost, id);
+        nbDigitalVideoDiscs++;
+    }
     
     public void play() {
         System.out.println("Playing DVD: " + this.getTitle());
