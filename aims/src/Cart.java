@@ -1,6 +1,9 @@
 package aims.src;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Cart {
     public static final int MAX_NUMBERS_ORDERED = 20;
@@ -23,8 +26,7 @@ public class Cart {
         }
     }
 
-
-    public void printCart() {
+    public void printCart(Cart cart) {
         System.out.println("***********************CART***********************");
         System.out.println("Ordered items:");
         int i = 1;
@@ -35,7 +37,6 @@ public class Cart {
         System.out.println("Total cost: " + totalCost() + "$");
         System.out.println("***************************************************");
     }
-
 
     public void searchByID(int id) {
         for (Media item : itemsOrdered) {
@@ -65,4 +66,21 @@ public class Cart {
         }
         return total;
     }
+
+    public Map<String, Media> getItemsOrdered() {
+    Map<String, Media> itemsByTitle = new HashMap<>();
+    for (Media media : itemsOrdered) {
+        itemsByTitle.put(media.getTitle(), media);
+        itemsByTitle.put(Integer.toString(media.getId()), media);
+    }
+    return itemsByTitle;
+}
+
+    public void sortByTitleCost() {
+		Collections.sort(this.itemsOrdered, Media.COMPARE_BY_TITLE_COST);
+	}
+	public void sortByCostTitle() {
+		Collections.sort(this.itemsOrdered, Media.COMPARE_BY_COST_TITLE);
+	}
+
 }

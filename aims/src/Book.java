@@ -9,8 +9,8 @@ public class Book extends Media {
         return authors;
     }
 
-    public Book() {
-        super("Untitled", "Other", 0.0f, 0);
+    public Book(String title, String category, float cost, int id) {
+        super(title, category, cost, id);
     }
 
     public void addAuthor(String authorName) {
