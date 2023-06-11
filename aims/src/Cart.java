@@ -1,6 +1,7 @@
 package aims.src;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -75,5 +76,11 @@ public class Cart {
     return itemsByTitle;
 }
 
+    public void sortByTitleCost() {
+		Collections.sort(this.itemsOrdered, Media.COMPARE_BY_TITLE_COST);
+	}
+	public void sortByCostTitle() {
+		Collections.sort(this.itemsOrdered, Media.COMPARE_BY_COST_TITLE);
+	}
 
 }

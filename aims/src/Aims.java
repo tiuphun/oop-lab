@@ -84,33 +84,33 @@ public class Aims extends Cart{
     }
 
     public static void updateStore(Scanner scanner, int choice, Store store, Cart cart) {
-            do {
-                System.out.println("Options: ");
-                System.out.println("--------------------------------");
-                System.out.println("1. Add a new media");
-                System.out.println("2. Remove a media");
-                System.out.println("0. Back");
-                System.out.println("--------------------------------");
-                System.out.println("Please choose a number: 0-1-2");
+        do {
+            System.out.println("Options: ");
+            System.out.println("--------------------------------");
+            System.out.println("1. Add a new media");
+            System.out.println("2. Remove a media");
+            System.out.println("0. Back");
+            System.out.println("--------------------------------");
+            System.out.println("Please choose a number: 0-1-2");
 
-                choice = scanner.nextInt();
+            choice = scanner.nextInt();
 
-                switch (choice) {
-                case 1:
-                    addMediaToStore(scanner, store, cart);
-                    break;
-                case 2:
-                    removeMediaFromStore(scanner, store, cart);
-                    break;
-                case 0:
-                    showMenu(scanner, choice, store, cart);
-                    break;
-                default:
-                    System.out.println("Invalid choice. Please try again.");
-                    break;
-                }
-            } while (choice != 0);
-        }
+            switch (choice) {
+            case 1:
+                addMediaToStore(scanner, store, cart);
+                break;
+            case 2:
+                removeMediaFromStore(scanner, store, cart);
+                break;
+            case 0:
+                showMenu(scanner, choice, store, cart);
+                break;
+            default:
+                System.out.println("Invalid choice. Please try again.");
+                break;
+            }
+        } while (choice != 0);
+    }
 
     public static void cartMenu(Scanner scanner, int choice, Store store, Cart cart) {
         do {
@@ -184,8 +184,8 @@ public class Aims extends Cart{
 
     public static void playMedia(Scanner scanner, Store store) {
         String title = getTitleFromUser(scanner, store);
-        if (store.getItemsInStore().contains(title)) {
-            Media media = Store.getItemsInStore().get(title);
+        if (store.getItemsInStore().containsValue(title)) {
+            Media media = store.getItemsInStore().get(title);
             if (media instanceof CompactDisc) {
                 CompactDisc cd = (CompactDisc) media;
                 cd.play();
@@ -206,8 +206,8 @@ public class Aims extends Cart{
 
     public static void addMediaToCart(Scanner scanner, Cart cart, Store store) {
         String title = getTitleFromUser(scanner, store);
-        if (store.getItemsInStore().contains(title)) {
-            Media media = Store.getItemsInStore().get(title);
+        if (store.getItemsInStore().containsValue(title)) {
+            Media media = store.getItemsInStore().get(title);
             cart.addMedia(media);
         } else {
             System.out.println("Media not found!");
@@ -259,10 +259,10 @@ public class Aims extends Cart{
 
             switch (choice) {
             case 1:
-                
+                cart.sortByTitleCost();
                 break;
             case 2:
-                
+                cart.sortByCostTitle();
                 break;
             case 0:
                 cartMenu(scanner, choice, store, cart);
