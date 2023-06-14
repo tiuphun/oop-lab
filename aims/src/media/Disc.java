@@ -1,4 +1,4 @@
-package aims.src;
+package aims.src.media;
 
 public class Disc extends Media {
     private int length;

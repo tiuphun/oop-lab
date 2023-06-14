@@ -1,4 +1,5 @@
-package aims.src;
+package aims.src.media;
+
 public class DigitalVideoDisc extends Media implements Playable{
     private String director;
     private int length;

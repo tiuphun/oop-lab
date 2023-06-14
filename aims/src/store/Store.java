@@ -1,6 +1,8 @@
-package aims.src;
+package aims.src.store;
 
 import java.util.ArrayList;
+
+import aims.src.media.Media;
 
 public class Store {
     private static ArrayList<Media> itemsInStore = new ArrayList<Media> ();

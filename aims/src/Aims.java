@@ -2,6 +2,13 @@ package aims.src;
 
 import java.util.Scanner;
 
+import aims.src.cart.Cart;
+import aims.src.media.Book;
+import aims.src.media.CompactDisc;
+import aims.src.media.DigitalVideoDisc;
+import aims.src.media.Media;
+import aims.src.store.Store;
+
 public class Aims extends Cart{
     public static void main(String[] args) {
         Store store = new Store();

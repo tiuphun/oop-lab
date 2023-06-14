@@ -1,9 +1,11 @@
-package aims.src;
+package aims.src.cart;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+
+import aims.src.media.Media;
 
 public class Cart {
     public static final int MAX_NUMBERS_ORDERED = 20;

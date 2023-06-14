@@ -1,4 +1,4 @@
-package aims.src;
+package aims.src.media;
 
 public class Track implements Playable {
     private String title;

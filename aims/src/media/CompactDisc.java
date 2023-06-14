@@ -1,4 +1,4 @@
-package aims.src;
+package aims.src.media;
 
 import java.util.ArrayList;
 
