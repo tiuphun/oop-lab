@@ -1,4 +1,4 @@
-package painter.src;
+package painter.src.main.java.gui;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
