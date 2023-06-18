@@ -1,4 +1,4 @@
-package aims.src;
+package aims.src.gui;
 
 import java.awt.Color;
 import java.awt.FlowLayout;
@@ -10,6 +10,9 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+
+import aims.src.media.Media;
+import aims.src.media.Playable;
 
 public class MediaStore extends JPanel {
     private Media media;

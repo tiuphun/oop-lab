@@ -1,4 +1,6 @@
-package aims.src;
+package aims.src.store;
+
+import aims.src.media.DigitalVideoDisc;
 
 public class StoreTest {
     public static void main(String[] args) {

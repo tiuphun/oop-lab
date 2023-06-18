@@ -1,4 +1,4 @@
-package aims.src;
+package aims.src.gui;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
