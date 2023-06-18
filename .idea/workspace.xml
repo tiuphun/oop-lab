@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d66c8626-8cbe-43d9-aeb6-5a9a6aa4e153" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oop-lab.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/others/lab5/lab5.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/others/lab5/src/AWTAccumulator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/others/lab5/src/NumberGrid.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/others/lab5/src/SwingAccumulator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/lab5/AWTAccumulator$TFInputListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/lab5/AWTAccumulator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/lab5/NumberGrid$ButtonListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/lab5/NumberGrid.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/lab5/SwingAccumulator$TFInputListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/lab5/SwingAccumulator.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2RMZy0AvQ8ha85HlTilPm1lU7G6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/others" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="AWTAccumulator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AWTAccumulator" />
+      <module name="lab5" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AWTAccumulator" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d66c8626-8cbe-43d9-aeb6-5a9a6aa4e153" name="Changes" comment="" />
+      <created>1687062161117</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1687062161117</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand>
+      <path>
+        <item name="oop-lab" type="b2602c69:ProjectViewProjectNode" />
+        <item name="dir{file:///Users/tieuphuong/IdeaProjects/oop-lab}" type="462c0819:PsiDirectoryNode" />
+      </path>
+    </expand>
+    <select />
+  </component>
+</project>
