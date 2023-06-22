@@ -2,25 +2,43 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane fx:id="drawingAreaPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="painter.src.PainterController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.painter.PainterController">
   <padding>
     <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
   </padding>
   <left>
-    <VBox maxHeight="1.7976931348623157E308" BorderPane.alignment="CENTER">
+    <VBox maxHeight="1.7976931348623157E308" spacing="8.0" BorderPane.alignment="CENTER">
       <BorderPane.margin>
         <Insets right="8.0" />
       </BorderPane.margin>
       <children>
-        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clearButtonPressed" text="Clear" />
+            <TitledPane animated="false" prefWidth="100.0" text="Tools">
+              <content>
+                <AnchorPane maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="58.0">
+                     <children>
+                        <RadioButton fx:id="eraserButton" layoutX="14.0" layoutY="5.0" mnemonicParsing="false" onAction="#toolsButtonSelected" text="Eraser">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="toolsToggleGroup" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="penButton" layoutX="14.0" layoutY="29.0" mnemonicParsing="false" onAction="#toolsButtonSelected" text="Pen" toggleGroup="$toolsToggleGroup" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </TitledPane>
+        <Button fx:id="clearButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clearButtonPressed" text="Clear" />
       </children>
     </VBox>
   </left>
-  <center>
-    <Pane onMouseDragged="#drawingAreaMouseDragged" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER" />
-  </center>
+   <center>
+      <Pane fx:id="drawingAreaPane" onMouseDragged="#drawingAreaMouseDragged" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER" />
+   </center>
 </BorderPane>
