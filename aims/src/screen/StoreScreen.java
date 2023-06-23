@@ -1,4 +1,7 @@
-package aims.src.gui;
+package aims.src.screen;
+
+import aims.src.media.Media;
+import aims.src.store.Store;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -58,7 +61,7 @@ public class StoreScreen extends JFrame {
         title.setForeground(Color.BLACK);
 
         JButton cart = new JButton("View cart");
-        cart.setPreferredSize(new Dimension(100, 50));  
+        cart.setPreferredSize(new Dimension(100, 50));
         cart.setMaximumSize(new Dimension(100, 50));
 
         header.add(Box.createRigidArea(new Dimension(10, 10)));
@@ -66,7 +69,7 @@ public class StoreScreen extends JFrame {
         header.add(Box.createHorizontalGlue());
         header.add(cart);
         header.add(Box.createRigidArea(new Dimension(10, 10)));
-    
+
         return header;
     }
 
