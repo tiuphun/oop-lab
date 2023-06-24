@@ -7,9 +7,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
+import javax.swing.*;
 import java.io.IOException;
 
-public class CartScreen {
+public class CartScreen extends JFrame {
     private Cart cart;
 
     public CartScreen(Cart cart) {
@@ -37,6 +38,5 @@ public class CartScreen {
 
             }
         });
-
     }
 }

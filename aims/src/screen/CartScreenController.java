@@ -3,16 +3,21 @@ package aims.src.screen;
 import aims.src.cart.Cart;
 import aims.src.media.Media;
 import aims.src.media.Playable;
+import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-import javax.swing.event.ChangeListener;
-import javax.swing.table.TableColumn;
-import java.awt.event.ActionEvent;
 
 public class CartScreenController {
+    public Button btnPlay;
+    public Button btnRemove;
+    public ToggleGroup filterCategory;
     private  Cart cart;
 
     @FXML private TableView<Media> tblMedia;
@@ -31,14 +36,14 @@ public class CartScreenController {
                 new PropertyValueFactory<Media, String>("title"));
         colMediaCategory.setCellValueFactory(
                 new PropertyValueFactory<Media, String>("category"));
-        colMediaCost.setCallValueFactory(
+        colMediaCost.setCellValueFactory(
                 new PropertyValueFactory<Media, Float>("cost"));
         tblMedia.setItems(this.cart.getItemsOrdered());
 
         btnPlay.setVisible(false);
         btnRemove.setVisible(false);
 
-        tblMedia.setSelectionModel().selectedItemProperty().addListener(
+        tblMedia.getSelectionModel().selectedItemProperty().addListener(
                 new ChangeListener<Media>() {
                     @Override
                     public void changed(ObservableValue<? extends Media> observable, Media oldValue, Media newValue) {
@@ -49,21 +54,15 @@ public class CartScreenController {
 
                     void updateButtonBar(Media media) {
                         btnRemove.setVisible(true);
-                        if (media instanceof Playable) {
-                            btnPlay.setVisible(true);
-                        }
-                        else {
-                            btnPlay.setVisible(false);
-                        }
+                        btnPlay.setVisible(media instanceof Playable);
                     }
                 }
         );
     }
 
     @FXML
-    void btnRemovePressed(ActionEvent event){
-        Media media = tblMedia.setSelectionModel().getSelectedItem();
+    public void btnRemovePressed(ActionEvent event) {
+        Media media = tblMedia.getSelectionModel().getSelectedItem();
         cart.removeMedia(media);
     }
-
 }
