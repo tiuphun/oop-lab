@@ -11,16 +11,16 @@ public class StoreTest {
         DigitalVideoDisc dvd4 = new DigitalVideoDisc("Welcome to the Ballroom", "Animation", "Tomo Takeuchi", 87, 33.21f);
         DigitalVideoDisc dvd5 = new DigitalVideoDisc("The Night is Short, Walk on Girl", "Romantic Comedy", "Masaaki Yuasa", 94, 37.93f);
 
-        store.addDVD(dvd1);
-        store.addDVD(dvd2);
-        store.addDVD(dvd3);
-        store.addDVD(dvd4);
-        store.addDVD(dvd5);
+        store.addMedia(dvd1);
+        store.addMedia(dvd2);
+        store.addMedia(dvd3);
+        store.addMedia(dvd4);
+        store.addMedia(dvd5);
 
         store.displayStore();
 
-        store.removeDVD(1);
-        store.removeDVD(2);
+        store.removeMedia(dvd1);
+        store.removeMedia(dvd2);
 
         store.displayStore();
     }

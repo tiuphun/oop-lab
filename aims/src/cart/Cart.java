@@ -1,15 +1,12 @@
 package aims.src.cart;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
-
 import aims.src.media.Media;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class Cart {
     public static final int MAX_NUMBERS_ORDERED = 20;
-    private ArrayList<Media> itemsOrdered = new ArrayList<Media> ();
+    private ObservableList<Media> itemsOrdered = FXCollections.observableArrayList();
 
     public void addMedia(Media media) {
         if (itemsOrdered.contains(media)) {
@@ -69,20 +66,18 @@ public class Cart {
         return total;
     }
 
-    public Map<String, Media> getItemsOrdered() {
-    Map<String, Media> itemsByTitle = new HashMap<>();
-    for (Media media : itemsOrdered) {
-        itemsByTitle.put(media.getTitle(), media);
-        itemsByTitle.put(Integer.toString(media.getId()), media);
+    public ObservableList<Media> getItemsOrdered() {
+        ObservableList<Media> items = FXCollections.observableArrayList();
+        items.addAll(itemsOrdered);
+        return items;
     }
-    return itemsByTitle;
-}
+
 
     public void sortByTitleCost() {
-		Collections.sort(this.itemsOrdered, Media.COMPARE_BY_TITLE_COST);
+		this.itemsOrdered.sort(Media.COMPARE_BY_TITLE_COST);
 	}
 	public void sortByCostTitle() {
-		Collections.sort(this.itemsOrdered, Media.COMPARE_BY_COST_TITLE);
+		this.itemsOrdered.sort(Media.COMPARE_BY_COST_TITLE);
 	}
 
 }

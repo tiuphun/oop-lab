@@ -1,8 +1,8 @@
 package aims.src.store;
 
-import java.util.ArrayList;
-
 import aims.src.media.Media;
+
+import java.util.ArrayList;
 
 public class Store {
     private static ArrayList<Media> itemsInStore = new ArrayList<Media> ();
@@ -37,10 +37,6 @@ public class Store {
     }
 
     public ArrayList<Media> getItemsInStore() {
-        ArrayList<Media> itemsList = new ArrayList<>();
-        for (Media media : itemsInStore) {
-            itemsList.add(media);
-        }
-        return itemsList;
+        return new ArrayList<>(itemsInStore);
     }
 }
