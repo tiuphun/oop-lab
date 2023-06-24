@@ -3,7 +3,7 @@
 
 **`Student Name: Nguyen Tieu Phuong | ID: 20210692`**
 
-### 🌳 Navigating the Branches
+## 🌳 Navigating the Branches
 This repository is branched into several branches.
 `main` is for checking in the tasks done in lab class, as well as the one with the most recent updates.
 
@@ -14,7 +14,7 @@ This repository is branched into several branches.
 3️⃣ `feature` branches contain codes for implementing certain features as required in the lab instruction.
 
 
-### 📂 Navigating the Folder Structure
+## 📂 Navigating the Folder Structure
 Other branches also have similar structure to `main`, with slight differences. Each folder is as follows:
 
 1️⃣ `aims`: All the codes for the Aims project. Usecase and class diagrams can be found under `requirement` and `design`, respectively.
